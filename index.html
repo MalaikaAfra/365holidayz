@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365holidayz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lora&family=Poppins&family=Cinzel&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+ <a href="https://wa.me/918939958899?text=Hi%2C%20I%20am%20interested%20in%20your%20travel%20package%0A%0ADestination:%0ATravel%20Dates:%0ANumber%20of%20Travellers:" target="_blank" class="floating-whatsapp">
+    <img src="images/whatsapp.png" alt="WhatsApp">
+</a>
+
+
+<div id="header"></div>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+    <div class="hero-slides">
+        <div class="slide active" style="background-image: url('images/background/azerbaijan.jpg');background-position: center;"></div>
+        <div class="slide" style="background-image: url('images/background/cambodia.jpg');background-position: top;"></div>
+        <div class="slide" style="background-image: url('images/background/europe.jpg');background-position: top ;"></div>
+        <div class="slide" style="background-image: url('images/background/malaysia.jpg');background-position: top;"></div>
+        <div class="slide" style="background-image: url('images/background/maldives.jpg');background-position: center;"></div>
+        <div class="slide" style="background-image: url('images/background/singapore.jpg');background-position: center;"></div>
+        <div class="slide" style="background-image: url('images/background/singapore1.jpg');background-position: top;"></div>
+        <div class="slide" style="background-image: url('images/background/srilanka.jpg');background-position: center;"></div>
+        <div class="slide" style="background-image: url('images/background/thailand.jpg');background-position: center;"></div>
+        <div class="slide" style="background-image: url('images/background/vietnam.jpg');background-position: center;"></div>
+        <div class="slide" style="background-image: url('images/background/dubai.jpg');background-position: top;"></div>
+   
+    </div>
+
+<div class="hero-overlay"></div>
+<div class="hero-content">
+    <h2>Explore the World in Luxury</h2>
+    <p>Handcrafted travel experiences tailored just for you</p>
+    <a href="packages.html" class="hero-btn">View Packages</a>
+</div>
+
+</section>
+<!--Collections-->
+<section class="collections signature">
+    <h2>Our Signature Collections</h2>
+
+    <div class="collection-grid">
+
+        <a href="couple.html" class="collection-card">
+            <img src="images/couple.png" alt="Honeymoon">
+            <div class="collection-info">
+                <h3>Infinite Horizons</h3>
+                <p>Boundless romance and ultimate privacy</p>
+            </div>
+        </a>
+
+        <a href="family.html" class="collection-card">
+            <img src="images/family.png" alt="Family">
+            <div class="collection-info">
+                <h3>All-Ages Elegance</h3>
+                <p>Sophisticated fun for every generation</p>
+            </div>
+        </a>
+
+        <a href="adventure.html" class="collection-card">
+            <img src="images/adventure.png" alt="Adventure">
+            <div class="collection-info">
+                <h3>Wild & Refined</h3>
+                <p>High-adrenaline meets five-star comfort</p>
+            </div>
+        </a>
+
+        <a href="mice.html" class="collection-card">
+            <img src="images/mice.png" alt="MICE">
+            <div class="collection-info">
+                <h3>Summit & Shore</h3>
+                <p>Professional breakthrough in a paradise setting</p>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<section class="collections elite">
+    <h2>Our Elite Collection</h2>
+
+    <div class="collection-grid single">
+
+        <a href="solo.html" class="collection-card">
+            <img src="images/solo.png" alt="Solo Travel">
+            <div class="collection-info">
+                <h3>The Luminuous Solo</h3>
+                <p>Fearless, elegant, and fully supported</p>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<div id="footer"></div>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showNextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 3000);
+</script>
+
+<script>
+    async function loadComponent(id, file) {
+        const response = await fetch(file);
+        const data = await response.text();
+        document.getElementById(id).innerHTML = data;
+    }
+
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+</script>
+
+</body>
+</html>

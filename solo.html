@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - 365holidayz</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lora&family=Poppins&family=Cinzel&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/918939958899?text=Hi%2C%20I%20am%20interested%20in%20your%20travel%20package%0A%0ADestination:%0ATravel%20Dates:%0ANumber%20of%20Travellers:" 
+   target="_blank" class="floating-whatsapp">
+    <img src="images/whatsapp.png" alt="WhatsApp">
+</a>
+
+<!-- HEADER -->
+<div id="header"></div>
+<!-- Solo Section -->
+<section class="collcontent-section">
+    <div class="collcontent-container">
+
+        <!-- LEFT TEXT -->
+        <div class="collcontent-text">
+
+            <h1 class="collcontent-title">The Luminous Solo | <br>Women Only Travel</h1>
+
+            <p class="collcontent-subtitle">
+                The Vibe: Fearless, Elegant and Fully Supported.
+            </p>
+
+            <p>
+               A journey of self-discovery, designed with the precision of 30 years of global expertise. 
+               The Luminous Solo is our elite collection of safe, 
+               sophisticated, and deeply enriching escapes for the independent woman.
+            </p>
+
+            <p>
+            We believe solo travel shouldn't mean being alone—it means being free. 
+            From hand-picked boutique stays to private, vetted guides, 
+            we handle every detail so you can focus on your own 'luminous' glow. 
+            </p>
+            <p>
+                Whether you're seeking a meditative retreat or a vibrant city escape, 
+                travel with the confidence that an expert is watching over every 
+                step of your journey. ​Step into your light. The world is waiting.
+
+            </p>
+
+            <p>
+               Your journey can be thoughtfully designed around your preferences, or curated from our existing packages—tailored as closely as possible to suit your budget and requirements.
+            </p>
+
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="collcontent-image">
+            <img src="images/solo1.png" alt="Solo">
+        </div>
+
+    </div>
+</section>
+
+ <!-- LAUNCH EVENT PHOTO -->
+<section class="launch-event">
+
+    <div class="launch-container">
+
+        <img src="images/women_launch.jpeg"
+             alt="Women Solo Travel launch event">
+
+        <div class="launch-content">
+
+            <h2>
+                Celebrating Courage, Connection & New Beginnings
+            </h2>
+
+            <p>
+                A glimpse from the launch of
+                <strong>The Luminous Solo</strong> —
+                an inspiring evening dedicated to women who dare
+                to explore the world independently,
+                confidently, and fearlessly.
+            </p>
+
+            <p class="launch-caption">
+                “Because every woman deserves to experience
+                the world on her own terms.”
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div id="footer"></div>
+
+<script>
+    async function loadComponent(id, file) {
+        const response = await fetch(file);
+        const data = await response.text();
+        document.getElementById(id).innerHTML = data;
+    }
+
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+</script>
+
+</body>
+</html>

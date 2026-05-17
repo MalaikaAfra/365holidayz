@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - 365holidayz</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lora&family=Poppins&family=Cinzel&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918939958899"
+       target="_blank"
+       class="floating-whatsapp">
+        <img src="images/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- THANK YOU SECTION -->
+
+    <section class="thankyou-section">
+
+        <div class="thankyou-card">
+
+            <div class="thankyou-icon">
+                ✈
+            </div>
+
+            <h1>Thank You!</h1>
+
+            <p class="thankyou-subtitle">
+                Your travel enquiry has been received successfully.
+            </p>
+
+            <p class="thankyou-text">
+                Our team at <strong>365holidayz</strong> will get in touch
+                with you shortly to help craft your perfect journey.
+            </p>
+
+            <div class="thankyou-buttons">
+
+                <a href="index.html" class="thankyou-btn primary-btn">
+                    Back to Home
+                </a>
+
+                <a href="https://wa.me/918939958899"
+                   target="_blank"
+                   class="thankyou-btn whatsapp-btn">
+                    Chat on WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+        async function loadComponent(id, file) {
+            const target = document.getElementById(id);
+
+            if (!target) return;
+
+            try {
+                const response = await fetch(file, {
+                    cache: 'no-store'
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${file}`);
+                }
+
+                target.innerHTML = await response.text();
+
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+    </script>
+
+</body>
+</html>

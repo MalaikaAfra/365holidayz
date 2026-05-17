@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - 365holidayz</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lora&family=Poppins&family=Cinzel&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/918939958899?text=Hi%2C%20I%20am%20interested%20in%20your%20travel%20package%0A%0ADestination:%0ATravel%20Dates:%0ANumber%20of%20Travellers:" 
+   target="_blank" class="floating-whatsapp">
+    <img src="images/whatsapp.png" alt="WhatsApp">
+</a>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+    <div class="about-container">
+
+        <!-- LEFT TEXT -->
+        <div class="about-text">
+
+            <h1 class="about-title">The Legacy of Luxury</h1>
+
+            <p class="about-subtitle">
+                Three decades of travel wisdom, curated for your next journey.
+            </p>
+
+            <p>
+                I am Aameena, founder of 365holidayz. To me, a holiday is more than a destination—it is a collection of perfectly timed, unforgettable moments.
+                With my deep-rooted experience in the international travel and tourism industry, I have seen the world change.
+                Yet, one thing remains constant—the desire for seamless, soul-stirring travel.
+            </p>
+
+            <p>
+                With over three decades of experience in the international travel and tourism industry, I have dedicated my career to crafting seamless, meaningful journeys for discerning travellers.
+            </p>
+
+            <p>
+                At 365holidayz, we go beyond bookings. We curate experiences. From private villa stays in the Maldives to exclusive business retreats in Bali, every journey is designed with precision, backed by global partnerships and a passion for excellence.
+            </p>
+
+            <p class="about-closing">
+                Your world, expertly curated.
+            </p>
+
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="about-image">
+            <img src="images/founder.JPG" alt="Luxury Travel">
+        </div>
+
+    </div>
+</section>
+
+<div id="footer"></div>
+
+<script>
+    async function loadComponent(id, file) {
+        const response = await fetch(file);
+        const data = await response.text();
+        document.getElementById(id).innerHTML = data;
+    }
+
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+    </script>
+
+</body>
+</html>

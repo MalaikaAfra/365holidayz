@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - 365holidayz</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lora&family=Poppins&family=Cinzel&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/918939958899?text=Hi%2C%20I%20am%20interested%20in%20your%20travel%20package%0A%0ADestination:%0ATravel%20Dates:%0ANumber%20of%20Travellers:" 
+   target="_blank" class="floating-whatsapp">
+    <img src="images/whatsapp.png" alt="WhatsApp">
+</a>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- Corporate Section -->
+<section class="collcontent-section">
+    <div class="collcontent-container">
+
+        <!-- LEFT TEXT -->
+        <div class="collcontent-text">
+
+            <h1 class="collcontent-title">Summit & Shore | <br>MICE Travel</h1>
+
+            <p class="collcontent-subtitle">
+                The Vibe: Professional breakthrough in a paradise setting.
+            </p>
+
+            <p>
+                Our Signature Collections represent the distinct traveller groups we personally cater to, 
+                with journeys carefully designed around their unique preferences.
+            </p>
+
+            <p>
+              Where high-level strategy meets coastal serenity. 
+              Summit & Shore is our signature framework for corporate retreats, conferences, 
+              and incentive travel. We transform business agendas into inspiring experiences, 
+              providing the perfect backdrop for leadership, networking, and celebration. 
+              Elevate your team’s vision where the boardroom meets the beach.
+            <p>
+               Your journey can be thoughtfully designed around your preferences, or curated from our existing packages—tailored as closely as possible to suit your budget and requirements.
+            </p>
+
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="collcontent-image">
+            <img src="images/mice1.png" alt="MICE">
+        </div>
+
+    </div>
+</section>
+
+
+<div id="footer"></div>
+
+<script>
+    async function loadComponent(id, file) {
+        const response = await fetch(file);
+        const data = await response.text();
+        document.getElementById(id).innerHTML = data;
+    }
+
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+</script>
+
+
+</body>
+</html>
