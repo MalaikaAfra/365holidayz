@@ -1,6 +1,23 @@
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+-webkit-text-size-adjust: 100%;
+}
+
 body {
 margin: 0;
 font-family: 'Arial', sans-serif;
+overflow-x: hidden;
+}
+
+img,
+iframe {
+max-width: 100%;
 }
 
 /* HEADER */
@@ -56,7 +73,7 @@ font-size: 18px;
 /* Email */
 .email {
 text-decoration: none;
-color: orange;
+color: #b8860b;
 font-weight: bold;
 transition: color 0.3s ease;
 }
@@ -1205,4 +1222,442 @@ padding: 20px;
         font-size: 24px;
     }
 
+}
+
+/* =========================
+   SITE-WIDE MOBILE LAYOUT
+========================= */
+
+@media (max-width: 1024px) {
+
+    header {
+        padding: 12px 24px;
+        gap: 22px;
+    }
+
+    .logo-section img {
+        max-height: 105px;
+    }
+
+    .contact-info {
+        gap: 10px;
+        font-size: 16px;
+    }
+
+    .main-nav {
+        gap: 26px;
+        padding: 12px 18px;
+    }
+
+    .hero {
+        height: 68vh;
+        min-height: 500px;
+    }
+
+    .hero-content {
+        max-width: 760px;
+        width: calc(100% - 48px);
+    }
+
+    .about-container,
+    .collcontent-container {
+        gap: 34px;
+        padding: 35px 28px;
+    }
+
+    .packages-grid {
+        max-width: 860px;
+    }
+}
+
+@media (max-width: 820px) {
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 14px 18px;
+    }
+
+    .logo-section {
+        align-items: center;
+    }
+
+    .logo-section img {
+        max-height: 94px;
+    }
+
+    .contact-wrapper {
+        align-items: center;
+        width: 100%;
+    }
+
+    .contact-info {
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+    .email,
+    .phone-number {
+        overflow-wrap: anywhere;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .icon img,
+    .social-icons img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 14px;
+    }
+
+    .main-nav a {
+        flex: 1 1 calc(50% - 10px);
+        max-width: 170px;
+        padding: 9px 8px;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        font-size: 14px;
+        letter-spacing: 0;
+        text-align: center;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 520px;
+        padding: 90px 18px;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 26px 22px;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .about-container,
+    .collcontent-container {
+        flex-direction: column;
+        gap: 24px;
+        padding: 38px 22px;
+    }
+
+    .about-image,
+    .collcontent-image {
+        width: 100%;
+    }
+
+    .about-image img {
+        margin-top: 0;
+    }
+
+    .about-text h1.about-title {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .collcontent-text h1.collcontent-title {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    .about-text p,
+    .collcontent-text p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .signature {
+        padding-top: 55px;
+    }
+
+    .collection-grid {
+        gap: 18px;
+    }
+
+    .collection-card {
+        width: min(100%, 330px);
+    }
+
+    .why,
+    .cta {
+        padding: 45px 18px;
+    }
+
+    .features {
+        gap: 16px;
+    }
+
+    .features div {
+        flex: 1 1 220px;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+        gap: 8px;
+        line-height: 1.5;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+
+    .contact-page {
+        padding: 50px 16px;
+    }
+
+    .contact-details,
+    .contact-form-box {
+        padding: 24px 18px;
+        border-radius: 14px;
+    }
+
+    .contact-details h2,
+    .contact-form-box h2 {
+        font-size: 26px;
+    }
+
+    .contact-card {
+        padding: 16px;
+    }
+
+    .contact-map-section {
+        padding: 0 16px 50px;
+    }
+
+    .packages-grid-section {
+        padding: 42px 16px 60px;
+    }
+
+    .package-card-content h2 {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .thankyou-section {
+        min-height: auto;
+        padding: 60px 16px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .logo-section img {
+        max-height: 78px;
+    }
+
+    .tagline {
+        max-width: 240px;
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .main-nav a {
+        flex-basis: calc(50% - 8px);
+        min-width: 0;
+    }
+
+    .floating-whatsapp {
+        right: 14px;
+        bottom: 14px;
+        padding: 8px;
+    }
+
+    .floating-whatsapp img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .hero {
+        min-height: 470px;
+        padding: 70px 14px;
+    }
+
+    .hero-content {
+        padding: 22px 16px;
+        border-radius: 10px;
+    }
+
+    .hero-content h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-btn,
+    .group-btn,
+    .thankyou-btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .collections {
+        padding: 8px 16px 28px;
+    }
+
+    .collections h2 {
+        font-size: 26px;
+        line-height: 1.25;
+        margin-bottom: 22px;
+    }
+
+    .collection-card {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .collection-card img {
+        height: 190px;
+    }
+
+    .about-container,
+    .collcontent-container {
+        padding: 32px 16px;
+    }
+
+    .about-text h1.about-title,
+    .contact-hero-content h1,
+    .packages-hero-content h1 {
+        font-size: 30px;
+    }
+
+    .about-text p.about-subtitle,
+    .about-text p.about-closing,
+    .collcontent-text p.collcontent-subtitle,
+    .contact-hero-content p,
+    .packages-hero-content p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .collcontent-text h1.collcontent-title {
+        font-size: 25px;
+    }
+
+    .launch-event {
+        padding: 42px 14px;
+    }
+
+    .launch-content {
+        padding: 0;
+    }
+
+    .contact-hero {
+        padding: 65px 16px;
+    }
+
+    .contact-page-container {
+        gap: 20px;
+    }
+
+    .contact-details,
+    .contact-form-box {
+        padding: 20px 14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 13px 14px;
+    }
+
+    .contact-map iframe {
+        height: 280px;
+    }
+
+    .packages-hero {
+        height: auto;
+        min-height: 250px;
+        padding: 60px 16px;
+    }
+
+    .package-card {
+        border-radius: 12px;
+    }
+
+    .package-card img {
+        height: 190px;
+    }
+
+    .package-card-content {
+        padding: 16px;
+    }
+
+    .package-card-content h2 {
+        font-size: 24px;
+    }
+
+    .package-price strong {
+        font-size: 21px;
+    }
+
+    .package-breakdown {
+        gap: 8px;
+    }
+
+    .package-breakdown span {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .packages-pagination a {
+        width: 36px;
+        height: 36px;
+    }
+
+    .thankyou-card {
+        padding: 36px 18px;
+        border-radius: 16px;
+    }
+
+    .thankyou-buttons {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .main-nav a {
+        flex-basis: 100%;
+        max-width: none;
+    }
+
+    .hero-content h2 {
+        font-size: 27px;
+    }
+
+    .package-card-content h2,
+    .collections h2 {
+        font-size: 23px;
+    }
 }
